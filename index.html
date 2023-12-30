@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Clarissa Kleveno</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="icon" href="assets/shrimp.png">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+</head>
+<body class="w3-light-grey">
+
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Clarissa Kleveno</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+
+  <!-- Photo grid -->
+  <div class="w3-row ">
+    <div class="w3-quarter">
+      <img src="assets/img/bee.png" style="width:100%" onclick="onClick(this)" alt="His name is Beetholomew.">
+      <img src="assets/img/love.png" style="width:100%" onclick="onClick(this)" alt="Love yourself (or else)">
+   </div>
+
+   <div class="w3-quarter">
+      <img src="assets/img/badbitch.png" style="width:100%" onclick="onClick(this)" alt="Im a bad bitch.">
+      <img src="assets/img/flower.png" style="width:100%" onclick="onClick(this)" alt="Big ass flower">
+
+    </div>
+
+    <div class="w3-quarter">
+      <img src="assets/img/nudes.png" style="width:100%" onclick="onClick(this)" alt="Very bold of me to post my nudes online.">
+      <img src="assets/img/shrimp.png" style="width:100%" onclick="onClick(this)" alt="Shrimp Reborn">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="assets/img/vulva.png" style="width:100%" onclick="onClick(this)" alt="Vulva art is a staple.">
+      <img src="assets/img/magnolia.png" style="width:100%;" onclick="onClick(this)" alt="Did you know it's theorized that magnolias evolved before bees?">
+
+    </div>
+  </div>
+<hr/>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-center w3-text-light-grey w3-padding-32" id="about" style="background-image: url('assets/img/color.png')">
+    <h4><b>Hello!</b></h4>
+    <img src="assets/img/profile.png" alt="Me" class="w3-image w3-padding-32" width="300" >
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <p>
+        My name is Clarissa. I'm a fiber artist based in Seattle passionate about sewing, sexual empowerment, and making cute things! I mainly work in fabric, and all of my work out of upcycled textiles (which sound impressive, until you realize about 92 million tons of textile waste ends up in the landfill yearly, ask me about book recommendations on the topic later). I’m learning to love myself, and my art is an expression of that. I’ve shown at <a href="">The Fishbowl,</a> <a href="https://www.instagram.com/whippersnapper.sea/">Whippersnapper,</a> and <a href="https://www.instagram.com/columbiacitygallery/">Columbia City Gallery.</a> I also run a mending and repair circle once a month out of the <a href="https://www.instagram.com/toollibrary/">Capitol Hill Tool Library</a> where I teach people to sew and fix their clothing! Send me a message if you would like to work together, want a new art pal, or have cool book recs.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+
+      <p>Want to chat? Send me an email at <a href=”mailto:makeitandfakeit.biz@gmail.com”>makeitandfakeit.biz@gmail.com</a></p>
+      <p>Want to seem more? follow me on instagram <a href="https://www.instagram.com/clarissakleveno/">@clarissakleveno</a></p>
+
+    </div>
+  </div>
+
+
+  <div class="w3-black w3-center w3-padding-24"></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
